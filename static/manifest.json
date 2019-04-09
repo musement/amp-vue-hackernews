@@ -1,0 +1,17 @@
+{
+    "short_name": "HN AMP",
+    "name": "Hackernews AMP",
+    "icons": [
+        {
+            "src": "https://staticv4.imgix.net/partners/amp-icon-144x144.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#1c79c0",
+    "splash_pages": null
+}

@@ -1,0 +1,22 @@
+<li class="comment">
+  <div class="by">
+    <a href="/user/{{ by }}">{{ by }}</a>
+    {{ time }} ago
+  </div>
+  <div class="text">{{{ text }}}</div>
+  
+  {{#kids}}
+  <ul class="comment-children">
+    <amp-list 
+      id="comment_{{ . }}"
+      src="https://hacker-news.firebaseio.com/v0/item/{{ . }}.json" 
+      template="itemCommentsTpl.html" 
+      items="."
+      single-item 
+      layout="responsive"
+      width="100" 
+      height="30"
+    />
+  </ul>
+  {{/kids}}
+</li>
