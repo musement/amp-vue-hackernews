@@ -5,7 +5,7 @@ export default function ampHtmlSanitizer() {
   const modifyHtml = (html) => {
     // Add amp-custom tag to added CSS
     html = html.replace(/<style data-vue-ssr/g, '<style amp-custom data-vue-ssr')
-    // Remove every script tag from generated HTML
+    // Remove every script tag from generated HTML, except for those containing "data-safe" attribute
     html = html.replace(/<script(?=\s|>)(?!(?:[^>=]|=(['"])(?:(?!\1).)*\1)*?\sdata-safe)[^>]*>.*?<\/script>/gi, '')
 
     return html
