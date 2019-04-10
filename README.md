@@ -3,6 +3,14 @@ Hacker News client app built with Nuxt.js (and Vue.js) which generates fast and 
 
 The idea behind this project is to provide a developer friendly "recipe" to generate and serve a PWA with AMP using Javascript.
 
+<p align="center">
+  <a href="https://hn-amp.herokuapp.com" target="_blank">
+    <img src="https://user-images.githubusercontent.com/2380118/55910895-cd32bd80-5bdf-11e9-91bf-0554b970fb87.png" width="256px"
+    ><br>
+    Live Demo
+  </a>
+</p>
+
 ## Why Vue.js and Nuxt.js
 > Simplicity is the key to brilliance
 
