@@ -3,20 +3,24 @@
     <amp-live-list id="top-items" data-poll-interval="15000" data-max-items-per-page="30">
       <!-- pagination is optional -->
       <div class="news-list-nav" pagination>
-        <span v-if="currentPage > 1"><a :href="prevPageLink">prev</a></span>
+        <span v-if="currentPage > 1">
+          <a :href="prevPageLink" title="go to previous page">prev</a>
+        </span>
         <span>{{ currentPage }} / {{ pages }}</span>
-        <span v-if="currentPage < pages"><a :href="nextPageLink">more</a></span>
+        <span v-if="currentPage < pages">
+          <a :href="nextPageLink" title="go to next page">next</a>
+        </span>
       </div>
       <button update on="tap:top-items.update" class="update_list">
         You have updates!
       </button>
-      <div items class="items">
+      <ul items class="items">
         <item
           v-for="(item) in displayItems"
           :key="item.id"
           :item="item"
         />
-      </div>
+      </ul>
     </amp-live-list>
   </div>
 </template>
@@ -88,6 +92,7 @@ export default {
   margin 70px auto
   width 100%
   max-width 960px
+  padding 0
 button.update_list
   position fixed
   right 10px

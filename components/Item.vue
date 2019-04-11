@@ -45,6 +45,7 @@ export default {
   border-bottom 1px solid #eee
   position relative
   line-height 20px
+  list-style-type none
   .score
     color #1c79c0
     font-size 1.1em

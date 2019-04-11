@@ -45,8 +45,15 @@ export default {
   head() {
     return {
       htmlAttrs: {
-        amp: undefined // "amp" has no value
+        amp: undefined, // "amp" has no value
+        lang: 'en'
       },
+      meta: [
+        {
+          name: 'description',
+          content: 'Hacker News reader progressive web app made with AMP, Nuxt.js and Vue.js'
+        }
+      ],
       script: [
         {
           'data-safe': undefined,
