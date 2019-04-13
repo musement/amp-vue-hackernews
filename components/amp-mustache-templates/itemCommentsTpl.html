@@ -1,12 +1,19 @@
 <li class="comment">
+  <amp-state id="commentState_{{ id }}">{expanded: false}</amp-state>
   <div class="by">
     <a href="/user/{{ by }}">{{ by }}</a>
     {{ time }} ago
   </div>
   <div class="text">{{{ text }}}</div>
+  <div class="toggle"
+    [class]="commentState_{{ id }}.expanded ? 'toggle open' : 'toggle'">
+    <a on="tap:AMP.setState({
+      commentState_{{ id }}: { expanded: !commentState_{{ id }}.expanded }
+    })">toggle replies</a>
+  </div>
   
-  {{#kids}}
-  <ul class="comment-children">
+  <ul class="comment-children PAPPARA" hidden [hidden]="commentState_{{ id }}.expanded == false">
+    {{#kids}}
     <amp-list 
       id="comment_{{ . }}"
       src="https://hacker-news.firebaseio.com/v0/item/{{ . }}.json" 
@@ -17,6 +24,6 @@
       width="100" 
       height="30"
     />
+    {{/kids}}
   </ul>
-  {{/kids}}
 </li>
